@@ -15,7 +15,7 @@ RUN npm run ${TARGET}
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 
-FROM node:1.13
+FROM nginx:1.13
 
 COPY --from=node /app/dist/ /usr/share/nginx/html
 
